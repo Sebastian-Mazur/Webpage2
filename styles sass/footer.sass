@@ -1,0 +1,51 @@
+@import "general"
+
+$whiteColor: #ffffff
+
+footer
+    padding: $paddingAboutUs 
+    fieldset
+        @extend .container
+        h3
+            @extend .legend-heading
+        p
+            @extend .p-style            
+            padding: 45px 185px
+            line-height: 25.89px
+        button
+            width: 395px
+            height: 58px
+            border: 0
+            background-color: $textColorDark            
+            margin-bottom: 50px
+            a
+                font-size: 16px
+                font-weight: 400            
+                text-transform: uppercase
+                text-decoration: none
+                color: $whiteColor
+    div
+        display: flex
+        justify-content: center
+        margin-top: 63px        
+        img
+            height: 35px
+            margin-right: 38px
+        p
+            font-size: 14px
+            color: $textColorDark
+            font-weight: 400
+            line-height: 8px
+
+@media (max-width: 767px)
+
+    footer
+        padding: $paddingSmallDevices
+        fieldset
+            p
+                padding: 10px 30px
+            button
+                width: 60%
+            // h3
+            //     padding: 0
+            

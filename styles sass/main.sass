@@ -1,0 +1,122 @@
+@import "general"
+
+.about-section    
+    padding: $paddingAboutUs
+    color: $textColorDark    
+    fieldset
+        @extend .container        
+        h3
+            @extend .legend-heading
+        p
+            @extend .p-style
+            padding: 50px 170px            
+            line-height: 24px
+        
+.services-section    
+    background: url("../assets/layer-4.png") 0/cover
+    padding: $paddingServices
+    color: $whiteColor
+    fieldset
+        border: 2px solid $whiteColor
+        @extend .container        
+        h3
+            @extend .legend-heading
+        p
+            @extend .p-style
+            line-height: 25.89px
+            padding: 64px 170px 56px        
+
+.what-we-do-section
+    padding: $paddingWhatWeDo
+    color: $textColorDark
+    fieldset
+        @extend .container        
+        h3
+            @extend .legend-heading
+        div
+            padding-top: 110px
+            width: 540px
+            margin: 0 auto
+            h4
+                text-transform: uppercase
+                padding: 30px
+                font-size: 20px
+                font-weight: 700
+                margin: 0
+            p
+                margin: 0
+        div:last-child
+            padding-bottom: 90px
+        
+.our-project-section
+    display: flex
+    flex-wrap: wrap
+    
+    div[class*="project-number"]
+        margin: 4px        
+        position: relative
+        height: 240px        
+        h3
+            position: absolute
+            left: 48px
+            bottom: 40px
+            color: $whiteColor
+            font-size: 34px
+            font-weight: 700
+            letter-spacing: 8.95px
+            text-transform: uppercase
+            margin: 0
+    .project-number-2, .project-number-5
+        flex: 41%
+    .project-number-1, .project-number-3, .project-number-4, .project-number-6
+        flex: 28%
+    .project-number-1
+        background: url("../assets/layer-5-copy.png") 0/cover
+        margin-left: 0
+    .project-number-2
+        background: url("../assets/layer-5-copy-3.png") 0/cover
+    .project-number-3
+        background: url("../assets/layer-5-copy-2.png") 0/cover
+        margin-right: 0
+    .project-number-4
+        background: url("../assets/layer-5-copy-4.png") 0/cover
+        margin-left: 0
+    .project-number-5
+        background: url("../assets/layer-5-copy-4 (1).png") 0/cover
+    .project-number-6
+        background: url("../assets/layer-5-copy-4 (2).png") 0/cover
+        margin-right: 0
+
+@media (min-width: 992px) and (max-width: 1199px)
+    .our-project-section
+        div[class*="project-number"]
+            flex: 48%
+
+@media (min-width: 768px) and (max-width: 991px)
+    .our-project-section
+        div[class*="project-number"]
+            flex: 48%
+
+@media (max-width: 767px)
+
+    .about-section, .services-section, .what-we-do-section   
+        padding: $paddingSmallDevices
+
+    .about-section
+        fieldset            
+            p
+                padding: 10px 30px
+
+    .services-section
+        fieldset
+            p
+                padding: 10px 30px
+
+    .our-project-section
+        div[class*="project-number"]
+            flex: 98%
+    
+    .what-we-do-section
+        fieldset
+            div
+                width: auto
